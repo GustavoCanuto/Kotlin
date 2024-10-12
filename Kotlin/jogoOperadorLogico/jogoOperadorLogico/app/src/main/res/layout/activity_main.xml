@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jogo Operadores Relacionais e Lógicos"
+        android:textSize="18sp"
+        android:textColor="#A5D429"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvSentenca1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="57 == 8"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/tvLogico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="||"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintStart_toEndOf="@+id/tvSentenca1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/tvSentenca2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23 > 76"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintStart_toEndOf="@+id/tvLogico"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/tvPergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual é o resultado?"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSentenca1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvPergunta"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp">
+
+        <RadioButton
+            android:id="@+id/rbVerdadeiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verdadeiro" />
+
+        <RadioButton
+            android:id="@+id/rbFalso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Falso" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvPontos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pontos: 0"
+        android:textSize="18sp"
+        android:textColor="#FF0000"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        app:layout_constraintTop_toBottomOf="@+id/tvPontos"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/btnSair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        app:layout_constraintTop_toBottomOf="@+id/tvPontos"
+        app:layout_constraintStart_toEndOf="@+id/btnContinuar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
